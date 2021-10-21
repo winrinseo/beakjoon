@@ -28,6 +28,7 @@ vector<int> getTable(string& m) {
 	return ret;
 }
 
+
 vector<int> kmp(string& desert, string& m) {
 	int N = desert.size();
 	int M = m.size();
