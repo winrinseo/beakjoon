@@ -20,7 +20,6 @@ int main(){
         if(idx>=N) break;
         if(s.empty() || s.top() < num[idx]){
             s.push(i);
-            cout<<i<<" ";
             res.push_back('+');
             i++;
         }else if(s.top()==num[idx]){
