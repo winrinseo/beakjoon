@@ -24,5 +24,5 @@ int main(){
         dp[i] = min(dp[i-5]+1,dp[i-3]+1);
     }
     if(dp[N]>=INF) cout<<-1;
-    else cout<<dp[N];
+    else cout<<dp[N]; 
 }
