@@ -69,5 +69,6 @@ int main() {
 		double dv = a / n;
 		answer += dv;
 	}
+    
 	printf("%lf", answer);
 }
