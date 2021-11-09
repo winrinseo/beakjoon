@@ -27,6 +27,7 @@ void print_board(){
         cout<<"\n";
     }
 }
+
 void solve(){
     int r=-1,c=-1;
     for(int i = 0;i<9;i++){
