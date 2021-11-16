@@ -26,7 +26,7 @@ void right(int cur,int sum){
     right(cur+1,sum+arr[cur]);
     right(cur+1,sum);
     return;
-}
+} 
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
