@@ -9,7 +9,6 @@ int convert(int a) {
     if(a > 0) return 1;
     if(a < 0) return -1;
 }
-
 int init(int idx,int st,int ed){
     if(st==ed)
         return seg[idx] = convert(p[st]);
@@ -28,7 +27,7 @@ int mul(int idx,int st,int ed,int l,int r){
     if(st>=l&&r>=ed) return seg[idx];
     int mid = (st+ed)/2;
     return convert(mul(idx*2,st,mid,l,r)*mul(idx*2+1,mid+1,ed,l,r));
-}
+}  
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
@@ -46,7 +45,6 @@ int main(){
                 upd(1,1,N,b,c);
             }else{
                 long long ret = mul(1,1,N,b,c);
-                
                 if(ret<0) cout<<'-';
                 else if(ret>0) cout<<'+';
                 else cout<<'0';
