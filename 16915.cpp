@@ -81,7 +81,7 @@ int main(){
             adj[b*2].push_back(a*2+1);
         }
     }
-
+ 
     for(int i = 1;i<=M*2+1;i++){
         if(dfsn[i]==0) getScc(i);
     }
