@@ -10,6 +10,6 @@ int main(){
         char a = s.back(); s.pop_back();
         s.insert(s.begin(),a);
         ans+=stoi(s);
-    }
+    } 
     cout<<ans;
 }
