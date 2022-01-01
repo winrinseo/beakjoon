@@ -35,7 +35,7 @@ int main(){
             adj[b][a] = 0;
             indegree[a]--;
             indegree[b]++;
-        }
+        } 
         queue<int> q;
         for(int i =1;i<=n;i++){
             if(indegree[i]==0) q.push(i);
