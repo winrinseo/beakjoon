@@ -36,6 +36,6 @@ int main(){
             cout<<"ddong game";
             return 0;
         }
-    }
+    } 
     cout<<max(dp[N][0],max(dp[N][1],dp[N][2]));
 }
