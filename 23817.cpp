@@ -30,7 +30,7 @@ void bfs(int num){
         q.pop();
         if(cton[r][c]){
             dist[num][cton[r][c]] = hd;
-            dist[cton[r][c]][num] = hd;
+            dist[cton[r][c]][num] = hd; 
         }
         for(int i = 0;i<4;i++){
             int nr = r+d[i][0];
