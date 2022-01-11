@@ -45,7 +45,7 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     cin>>N>>M;
-    seg = vector<vector<int>>(N*4,vector<int>(N*4,0));
+    seg = vector<vector<int>>(N*2+2,vector<int>(N*2+2,0));
     for(int i = 1;i<=N;i++)
         for(int j = 1;j<=N;j++){
             cin>>arr[i][j];
