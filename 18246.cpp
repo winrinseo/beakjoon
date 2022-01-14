@@ -35,7 +35,7 @@ int ymax(int idx,int st,int ed,int l,int r,int x1,int x2){
     int mid = (st+ed)/2;
     return max(ymax(idx*2,st,mid,l,r,x1,x2),
         ymax(idx*2+1,mid+1,ed,l,r,x1,x2));
-}
+} 
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
