@@ -6,7 +6,7 @@
 using namespace std;
 using ll = long long;
 int N;
-pair<int,int> p[200005];
+pair<int,int> p[1000005];
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
