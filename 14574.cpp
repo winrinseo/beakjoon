@@ -49,7 +49,6 @@ int main(){
             int pa = get<1>(cooker[i-1]),pb = get<1>(cooker[j-1]);
             int ca = get<2>(cooker[i-1]),cb = get<2>(cooker[j-1]);
             edge.emplace_back(i,j,cal(pa,pb,ca,cb));
-            cout<<pa<<" "<<pb<<" "<<ca<<" "<<cb<<"\n";
         }
     }
     //최대값을 구해야하므로 cost가 큰 순으로 정렬
