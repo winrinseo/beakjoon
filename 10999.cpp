@@ -28,7 +28,7 @@ void propagate(int node,int st,int ed){
     }
 }
 //해당 구간에 모두 k를 더함
-void upd(int node,int ns,int nd,int k,int st,int ed){
+void upd(int node,int ns,int nd,ll k,int st,int ed){
     propagate(node,ns,nd);
     if(ed < ns||nd < st) return;
     if(st<=ns&&nd<=ed){
@@ -55,18 +55,16 @@ int main(){
         cin>>arr[i];
     }
     init(1,1,N);
-    while(M+K){
+    for(int i = 0;i<M+K;i++){
         int cmd; cin>>cmd;
         if(cmd==1){
-            int b,c,d;
+            ll b,c,d;
             cin>>b>>c>>d;
             upd(1,1,N,d,b,c);
-            M--;
         }else if(cmd==2){
             int b,c;
             cin>>b>>c;
-            cout<<add(1,1,N,b,c)<<'\n';
-            K--;
+            cout<<(ll)add(1,1,N,b,c)<<'\n';
         }
     }
 }
