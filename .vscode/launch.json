@@ -23,7 +23,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe 활성 파일 빌드"
+            "preLaunchTask": "C/C++: g++.exe 활성 파일 빌드",
+            "console": "integratedTerminal"
         }
     ]
 }
