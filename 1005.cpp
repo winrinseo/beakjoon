@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+//s
 using namespace std;
 
 vector<vector<int>> adj;
