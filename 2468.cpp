@@ -47,7 +47,6 @@ int main(){
                 if(visited[i][j]<h&&board[i][j] > h){
                     bfs(i,j,h);
                     area++;
-                    cout<<board[i][j]<<" ";
                 }
             }
         }
