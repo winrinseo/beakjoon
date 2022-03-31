@@ -16,7 +16,6 @@ int bfs(){
 
     while(!q.empty()){
         point cur = q.front();q.pop();
-        if(board[cur.r][cur.c]==1) cout<<cur.r<<" "<<cur.c<<" "<<cur.cnt<<"\n";
         if(cur.r==(N-1)&&cur.c==(M-1)) return cur.cnt;
         for(int i = 0;i<4;i++){
             int nr = cur.r+d[i][0];
