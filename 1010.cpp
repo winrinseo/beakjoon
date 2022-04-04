@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int T,N,M;
-long long dp[35][35];
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
