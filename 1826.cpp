@@ -30,6 +30,7 @@ int main(){
             pq.push(board[i].second);
             i++;
         }
+        //r을 더 늘려줄수 없으며 목적지에도 도착할수없는경우
         if(pq.empty()){
             cout<<-1;
             return 0;
