@@ -21,7 +21,7 @@ int main(){
         if(flag){
             answer[0]+=k;
             answer[1] = min(answer[1],k);
-        }
+        } 
     }
     if(answer[0]==0) cout<<-1;
     else cout<<answer[0]<<"\n"<<answer[1];
