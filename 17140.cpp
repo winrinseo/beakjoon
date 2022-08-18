@@ -59,7 +59,7 @@ int main(){
         for(int j = 0;j<3;j++)
             cin>>board[i][j];
     
-    int ans = 0;
+    int ans = 0; 
     int r = 3,c = 3;
     while(1){
         if(board[R][C] == K) break;
