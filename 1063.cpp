@@ -37,7 +37,7 @@ int main(){
 
             if(nsr < 1 || nsr > 8 || nsc < 1 || nsc > 8)
                 continue;
-            sr = nsr;
+            sr = nsr; 
             sc = nsc;
         }
         kr = nkr;
