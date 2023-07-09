@@ -26,11 +26,9 @@ int solve(int y , int x){
                 }
             }
         }
-        // cout<<y<<" "<<x<<"\n";
         if( i % 2 == 0) y *= -1;
         else x *= -1;
     }
-    // cout<<ret<<"\n";
     return ret;
 }
 
