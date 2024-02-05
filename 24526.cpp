@@ -1,3 +1,4 @@
+/* 강결합으로 그래프 압축
 #include <iostream>
 #include <stack>
 #include <vector>
@@ -73,5 +74,68 @@ int main(){
             solve(i);
     }
         
+    cout<<answer;
+}
+
+*/
+
+//강결합 없는  풀이
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int N,M;
+//방문을 표시할 배열
+//함수의 종료 여부 , 해당 정점이 사이클에 속해있는지
+bool visited[100005],notFinished[100005], isCycle[100005];
+
+vector<int> adj[100005];
+int answer = 0;
+int dfs(int cur){
+    notFinished[cur] = true;
+    visited[cur] = true;
+    // cout<<cur<<" ";
+    int ret = 1;
+    for(int & next : adj[cur]){
+        //종료되지 않은 정점에 연결된 것은 사이클에 속해있다는거임
+        //참조하는 정점이 이미 사이클에 속해있으면 해당 정점도 예외임
+        if(notFinished[next] || isCycle[next]){
+            ret = -1;
+            isCycle[cur] = true;
+        } else if(!visited[next]){
+            ret = min(ret , dfs(next));
+        }
+    }
+    
+    if(ret == 1){
+        // cout<<cur<<" ";
+        answer++;
+    }else{
+        isCycle[cur] = true;
+    }
+    notFinished[cur] = false;
+    return ret;
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin>>N>>M;
+
+    for(int i = 0;i<M;i++){
+        int a,b;cin>>a>>b;
+
+        adj[a].push_back(b);
+    }
+
+    for(int i = 1;i<=N;i++){
+        // cout<<i%N;
+        if(visited[i]) continue;
+        dfs(i);
+    }
+
     cout<<answer;
 }
