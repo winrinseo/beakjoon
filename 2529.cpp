@@ -53,7 +53,7 @@ int main(){
             solve(i , 0 , b);
             if(visited[10]) break;
             b.pop_back();
-            visited[i] = false;
+            visited[i] = false; 
     }
     cout<<b<<"\n"<<a;
 }
