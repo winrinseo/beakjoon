@@ -61,8 +61,8 @@ int main(){
                 if(nr < 0 || nr >= N || nc < 0 || nc >= N || map[nr][nc] == 2)
                     continue;
 
-            }
-            
+            } 
+
             if(map[nr][nc] == 1){//미리 뒤집기
                 board[r][c].reverse();
             }
