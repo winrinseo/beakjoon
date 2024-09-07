@@ -30,6 +30,7 @@ int main(){
             }
         }
     }
+    
     Y ^= temp;
     cout<<Y;
 
