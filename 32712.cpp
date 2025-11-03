@@ -27,7 +27,7 @@ int main(){
         ll score_cw = prefix[N] - prefix[N-cw] + (arr[i] * (K - cw));
         ll total = max(score_ccw , score_cw);
         answer = max(answer , total);
-        cout<<i<<" "<<score_ccw<<" "<<score_cw<<"\n";
+        
     }
     cout<<answer;
 }
