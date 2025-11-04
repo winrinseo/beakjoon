@@ -1,3 +1,5 @@
+
+// 이분탐색
 #include <iostream>
 #include <queue>
 
@@ -49,4 +51,30 @@ int main(){
         }
     }
     cout<<lo;
+}
+
+// 다이나믹 프로그래밍
+#include <iostream>
+#define ll long long
+using namespace std;
+
+int N;
+ll A[5005];
+ll dp[5005];
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cin>>N;
+
+    for(int i = 0;i<N;i++)
+        cin>>A[i];
+
+
+    for(int i = 1;i<N;i++){
+        dp[i] = (1LL<<60);
+        for(int j = 0;j<i;j++){
+            dp[i] = min(dp[i] , max( dp[j], ((ll)(i - j) * (1 + abs(A[i] - A[j])))));
+        }
+    }
+    cout<<dp[N-1];
 }
