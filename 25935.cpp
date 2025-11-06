@@ -26,7 +26,7 @@ int main(){
 
             //레몬부터 계산
             answer += (x * c * p_lemon);
-            cout<<answer<<" ";
+
             // 설탕은 필요 온스부터 계산
             int need_s = max(0 , s * c - remain_sugar);
             // 구매해야 할 포대 수
@@ -36,8 +36,6 @@ int main(){
             answer += (buy * p_sugar);
 
             remain_sugar = (buy * 80 + remain_sugar) - (s * c);
-
-            cout<<answer<<"\n";
         }
 
         cout<<answer<<"\n";
